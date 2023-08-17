@@ -12,60 +12,61 @@ public class Company {
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	
-	@Column(name="company_id")
-	private int companyId;
+	@Column
+	private int company_id;
 	
-	@Column(name="company_name")
-	private String companyNmae;
+	@Column
+	private String company_name;
 	
-	@Column(name="company_loc")
-	private String companyLoc;
+	@Column
+	private String company_loc;
 	
-	@Column(name="company_pincode")
-	private String companyPincode;
+	@Column
+	private String pincode;
 	
-	@Column(name="company_country_code")
-	private String companyCountryCode;
+	@Column
+	private String country_code;
 
-	public int getCompanyId() {
-		return companyId;
+	public int getCompany_id() {
+		return company_id;
 	}
 
-	public void setCompanyId(int companyId) {
-		this.companyId = companyId;
+	public void setCompany_id(int company_id) {
+		this.company_id = company_id;
 	}
 
-	public String getCompanyNmae() {
-		return companyNmae;
+	public String getCompany_name() {
+		return company_name;
 	}
 
-	public void setCompanyNmae(String companyNmae) {
-		this.companyNmae = companyNmae;
+	public void setCompany_name(String company_name) {
+		this.company_name = company_name;
 	}
 
-	public String getCompanyLoc() {
-		return companyLoc;
+	public String getCompany_loc() {
+		return company_loc;
 	}
 
-	public void setCompanyLoc(String companyLoc) {
-		this.companyLoc = companyLoc;
+	public void setCompany_loc(String company_loc) {
+		this.company_loc = company_loc;
 	}
 
-	public String getCompanyPincode() {
-		return companyPincode;
+	public String getPincode() {
+		return pincode;
 	}
 
-	public void setCompanyPincode(String companyPincode) {
-		this.companyPincode = companyPincode;
+	public void setPincode(String pincode) {
+		this.pincode = pincode;
 	}
 
-	public String getCompanyCountryCode() {
-		return companyCountryCode;
+	public String getCountry_code() {
+		return country_code;
 	}
 
-	public void setCompanyCountryCode(String companyCountryCode) {
-		this.companyCountryCode = companyCountryCode;
+	public void setCountry_code(String country_code) {
+		this.country_code = country_code;
 	}
+
 	
 	
 }
