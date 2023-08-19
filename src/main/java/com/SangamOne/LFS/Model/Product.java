@@ -14,18 +14,18 @@ public class Product {
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	
-	@Column(name="product_id")
-	private int productId;
+	@Column
+	private int product_id;
 	
-	@Column(name="company_id")
-	private int companyId;
+	@Column
+	private int company_id;
 	
-	@Column(name="house_id")
-	private int houseId;
+	@Column
+	private int house_id;
 	
 	
-	@Column(name="product_name")
-	private String productName;
+	@Column
+	private String product_name;
 	
 	@ManyToOne
 	@JoinColumn(name="company_id", insertable = false, updatable = false)
@@ -35,36 +35,36 @@ public class Product {
 	@JoinColumn(name="house_id", insertable = false, updatable = false)
 	private House house;
 
-	public int getProductId() {
-		return productId;
+	public int getProduct_id() {
+		return product_id;
 	}
 
-	public void setProductId(int productId) {
-		this.productId = productId;
+	public void setProduct_id(int product_id) {
+		this.product_id = product_id;
 	}
 
-	public int getCompanyId() {
-		return companyId;
+	public int getCompany_id() {
+		return company_id;
 	}
 
-	public void setCompanyId(int companyId) {
-		this.companyId = companyId;
+	public void setCompany_id(int company_id) {
+		this.company_id = company_id;
 	}
 
-	public int getHouseId() {
-		return houseId;
+	public int getHouse_id() {
+		return house_id;
 	}
 
-	public void setHouseId(int houseId) {
-		this.houseId = houseId;
+	public void setHouse_id(int house_id) {
+		this.house_id = house_id;
 	}
 
-	public String getProductName() {
-		return productName;
+	public String getProduct_name() {
+		return product_name;
 	}
 
-	public void setProductName(String productName) {
-		this.productName = productName;
+	public void setProduct_name(String product_name) {
+		this.product_name = product_name;
 	}
 
 	public Company getCompany() {
@@ -82,6 +82,6 @@ public class Product {
 	public void setHouse(House house) {
 		this.house = house;
 	}
-	
+
 	
 }

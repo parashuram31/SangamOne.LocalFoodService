@@ -14,69 +14,69 @@ public class House {
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	
-	@Column(name="house_id")
-	private int houseId;
+	@Column
+	private int house_id;
 	
-	@Column(name="company_id")
-	private int companyId;
+	@Column
+	private int company_id;
 	
-	@Column(name="house_number")
-	private String houseNumber;
+	@Column
+	private String house_number;
 	
-	@Column(name="house_address")
-	private String houseAddress;
+	@Column
+	private String house_address;
 	
-	@Column(name="contact_name")
-	private String contactName;
+	@Column
+	private String contact_name;
 	
-	@Column(name="email")
+	@Column
 	private String email;
 	
-	@Column(name="phone_no")
-	private String phoneNo;
+	@Column
+	private String phone_no;
 	
 	@ManyToOne
 	@JoinColumn(name="company_id", insertable = false, updatable = false)
-	private Company company;
+	private Company company;  
 
-	public int getHouseId() {
-		return houseId;
+	public int getHouse_id() {
+		return house_id;
 	}
 
-	public void setHouseId(int houseId) {
-		this.houseId = houseId;
+	public void setHouse_id(int house_id) {
+		this.house_id = house_id;
 	}
 
-	public int getCompanyId() {
-		return companyId;
+	public int getCompany_id() {
+		return company_id;
 	}
 
-	public void setCompanyId(int companyId) {
-		this.companyId = companyId;
+	public void setCompany_id(int company_id) {
+		this.company_id = company_id;
 	}
 
-	public String getHouseNumber() {
-		return houseNumber;
+	public String getHouse_number() {
+		return house_number;
 	}
 
-	public void setHouseNumber(String houseNumber) {
-		this.houseNumber = houseNumber;
+	public void setHouse_number(String house_number) {
+		this.house_number = house_number;
 	}
 
-	public String getHouseAddress() {
-		return houseAddress;
+	public String getHouse_address() {
+		return house_address;
 	}
 
-	public void setHouseAddress(String houseAddress) {
-		this.houseAddress = houseAddress;
+	public void setHouse_address(String house_address) {
+		this.house_address = house_address;
 	}
 
-	public String getContactName() {
-		return contactName;
+	public String getContact_name() {
+		return contact_name;
 	}
 
-	public void setContactName(String contactName) {
-		this.contactName = contactName;
+	public void setContact_name(String contact_name) {
+		this.contact_name = contact_name;
 	}
 
 	public String getEmail() {
@@ -87,12 +87,12 @@ public class House {
 		this.email = email;
 	}
 
-	public String getPhoneNo() {
-		return phoneNo;
+	public String getPhone_no() {
+		return phone_no;
 	}
 
-	public void setPhoneNo(String phoneNo) {
-		this.phoneNo = phoneNo;
+	public void setPhone_no(String phone_no) {
+		this.phone_no = phone_no;
 	}
 
 	public Company getCompany() {
@@ -101,7 +101,7 @@ public class House {
 
 	public void setCompany(Company company) {
 		this.company = company;
-	}
-	
+	}  
+
 	
 }
