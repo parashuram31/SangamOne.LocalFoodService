@@ -26,12 +26,17 @@ public class ProductController {
 		return "Inserte";
 	}
 	
+	@GetMapping("/viewProduct")
+	public List<Product> viewAllHouse() {
+		return productRepository.findAll();
+	}
+	
 	@GetMapping("/viewProductByCompanyId/{company_id}")
 	public List<Product> getProducts(@PathVariable int company_id){
 		return productRepository.getProducts(company_id);
 	}
 	
-	@GetMapping("/getHouseByCompanyId&houseId/{company_id}/{house_id}")
+	@GetMapping("/getProductsByCompanyId&houseId/{company_id}/{house_id}")
 	public List<Product> getProducts1(@PathVariable int company_id, @PathVariable int house_id){
 		return productRepository.findByProducts1(company_id, house_id);
 	}

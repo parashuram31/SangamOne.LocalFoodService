@@ -14,21 +14,16 @@ public class OrderProduct {
 	@Id
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	
-	@Column(name="order_product_id")
-	private int orderProductId;
-	
-	@Column(name="company_id")
-	private int companyId;
-	
-	@Column(name="house_id")
-	private int houseId;
-	
-	
-	@Column(name="quantity")
+	@Column
+	private int order_product_id;
+	@Column
+	private int company_id;
+	@Column
+	private int house_id;
+	@Column
+	private int product_id;
+	@Column
 	private String quantity;
-	
-	@Column(name="product_id")
-	private int productId;
 	
 	@ManyToOne
 	@JoinColumn(name="company_id", insertable = false, updatable = false)
@@ -42,28 +37,28 @@ public class OrderProduct {
 	@JoinColumn(name="product_id", insertable = false, updatable = false)
 	private Product product;
 
-	public int getOrderProductId() {
-		return orderProductId;
+	public int getOrder_product_id() {
+		return order_product_id;
 	}
 
-	public void setOrderProductId(int orderProductId) {
-		this.orderProductId = orderProductId;
+	public void setOrder_product_id(int order_product_id) {
+		this.order_product_id = order_product_id;
 	}
 
-	public int getCompanyId() {
-		return companyId;
+	public int getCompany_id() {
+		return company_id;
 	}
 
-	public void setCompanyId(int companyId) {
-		this.companyId = companyId;
+	public void setCompany_id(int company_id) {
+		this.company_id = company_id;
 	}
 
-	public int getHouseId() {
-		return houseId;
+	public int getHouse_id() {
+		return house_id;
 	}
 
-	public void setHouseId(int houseId) {
-		this.houseId = houseId;
+	public void setHouse_id(int house_id) {
+		this.house_id = house_id;
 	}
 
 	public String getQuantity() {
@@ -74,12 +69,12 @@ public class OrderProduct {
 		this.quantity = quantity;
 	}
 
-	public int getProductId() {
-		return productId;
+	public int getProduct_id() {
+		return product_id;
 	}
 
-	public void setProductId(int productId) {
-		this.productId = productId;
+	public void setProduct_id(int product_id) {
+		this.product_id = product_id;
 	}
 
 	public Company getCompany() {
@@ -105,6 +100,5 @@ public class OrderProduct {
 	public void setProduct(Product product) {
 		this.product = product;
 	}
-	
 	
 }

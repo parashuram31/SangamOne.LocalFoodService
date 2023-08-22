@@ -37,9 +37,9 @@ public class CompanyController {
 		return companyRepository.findById(company_id).get();
 	}
 	
-	@GetMapping("/getCompanyByCompanyName/{name}")
-	public List<Company> getByCompany(@PathVariable String name) {
-		return companyRepository.findByCompany(name);
+	@GetMapping("/getCompanyByCompanyId/{company_id}")
+	public List<Company> getByCompany(@PathVariable int company_id) {
+		return companyRepository.findByCompany(company_id);
 	}
 
 	@DeleteMapping("/delete/{company_id}")

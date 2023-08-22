@@ -28,15 +28,20 @@ public class HouseController {
 		return "Inserted";
 	}
 	
+	@GetMapping("/viewHouse")
+	public List<House> viewAllHouse() {
+		return houseRepository.findAll();
+	}
+	
 	@GetMapping("/viewHousesByCompanyId/{company_id}")
 	public List<House> getHouses(@PathVariable int company_id) {
 		return houseRepository.findByHouses(company_id);
 	}
 	
 	
-	@GetMapping("/getHouseByCompanyId&houseNo/{company_id}/{house_number}")
-	public List<House> getByHouses1(@PathVariable int company_id, @PathVariable String house_number) {
-		return houseRepository.findByHouse1(company_id, house_number);
+	@GetMapping("/getHouseByCompanyId&HouseId/{company_id}/{house_id}")
+	public List<House> getByHouses1(@PathVariable int company_id, @PathVariable int house_id) {
+		return houseRepository.findByHouse1(company_id, house_id);
 	}
 	
 	@PutMapping("/updateHouse")

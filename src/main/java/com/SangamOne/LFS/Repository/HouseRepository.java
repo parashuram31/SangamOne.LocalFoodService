@@ -12,12 +12,13 @@ import com.SangamOne.LFS.Model.House;
 
 public interface HouseRepository extends JpaRepository<House, Integer>{
 
-	@Query(value = "select * from houses where company_id=:company_id", nativeQuery = true)
+	@Query(value = "select * from house where company_id=:company_id", nativeQuery = true)
 	List<House> findByHouses(@Param("company_id") int company_id);
 	
 
-	@Query(value = "select * from houses where company_id=:company_id and house_number=:house_number", nativeQuery = true)
-	List<House> findByHouse1(int company_id, String house_number);
+	@Query(value = "select * from house where company_id=:company_id and house_id=:house_id", nativeQuery = true)
+	//List<House> findByHouse1(int company_id,int house_id);
+	List<House> findByHouse1(@Param("company_id") int company_id, @Param("house_id") int house_id);
 
 	@Modifying
 	@Transactional
