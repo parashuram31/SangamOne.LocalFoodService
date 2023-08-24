@@ -27,6 +27,9 @@ public class Product {
 	@Column
 	private String product_name;
 	
+	@Column
+	private int quantity;
+	
 	@ManyToOne
 	@JoinColumn(name="company_id", insertable = false, updatable = false)
 	private Company company;
@@ -81,6 +84,14 @@ public class Product {
 
 	public void setHouse(House house) {
 		this.house = house;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
 	}
 
 	

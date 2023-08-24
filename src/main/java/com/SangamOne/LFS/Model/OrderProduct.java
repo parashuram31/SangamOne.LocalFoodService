@@ -23,7 +23,7 @@ public class OrderProduct {
 	@Column
 	private int product_id;
 	@Column
-	private String quantity;
+	private int quantity;
 	
 	@ManyToOne
 	@JoinColumn(name="company_id", insertable = false, updatable = false)
@@ -61,11 +61,11 @@ public class OrderProduct {
 		this.house_id = house_id;
 	}
 
-	public String getQuantity() {
+	public int getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(String quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 
